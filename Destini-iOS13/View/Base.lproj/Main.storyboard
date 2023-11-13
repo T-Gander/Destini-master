@@ -20,36 +20,47 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="11V-rJ-Z0l">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0lr-ol-Sbt" userLabel="Question Stack">
+                                <rect key="frame" x="20" y="48" width="374" height="594"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="1" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noc-Rf-2gm">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="594"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zBW-uF-O12" userLabel="Button Stack">
                                 <rect key="frame" x="20" y="642" width="374" height="220"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7r-6h-zxq">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="105"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Choice 1" buttonSize="large">
-                                            <backgroundConfiguration key="background" image="choice1Background"/>
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Choice 1" backgroundImage="choice1Background">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="SelectedChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G2X-rh-D0Z"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ow4-TV-Ni4" userLabel="Choice 2">
                                         <rect key="frame" x="0.0" y="115" width="374" height="105"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Choice 2" buttonSize="large">
-                                            <backgroundConfiguration key="background" image="choice2Background"/>
-                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="30"/>
-                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Choice 2" backgroundImage="choice2Background">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="SelectedChoice:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fuG-oZ-HuT"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="220" id="bJU-Oz-4cW"/>
+                                    <constraint firstAttribute="height" constant="220" id="9II-bY-0Vh"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -57,14 +68,24 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="11V-rJ-Z0l" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="2pB-SF-CAt"/>
+                            <constraint firstItem="0lr-ol-Sbt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4rk-Xb-fc7"/>
+                            <constraint firstItem="0lr-ol-Sbt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9wC-o6-Xgo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zBW-uF-O12" secondAttribute="bottom" id="OzS-Ut-IuA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0lr-ol-Sbt" secondAttribute="trailing" constant="20" id="bXt-Lg-T5b"/>
                             <constraint firstItem="11V-rJ-Z0l" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="inE-ov-0JI"/>
                             <constraint firstItem="11V-rJ-Z0l" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ivn-qr-tzb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zBW-uF-O12" secondAttribute="trailing" constant="20" id="qQ4-Bz-vhs"/>
                             <constraint firstItem="11V-rJ-Z0l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="qZF-RA-9qc"/>
+                            <constraint firstItem="zBW-uF-O12" firstAttribute="top" secondItem="0lr-ol-Sbt" secondAttribute="bottom" id="tuj-ql-zJK"/>
                             <constraint firstItem="zBW-uF-O12" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="uTV-Be-0Eo"/>
+                            <constraint firstItem="zBW-uF-O12" firstAttribute="top" secondItem="0lr-ol-Sbt" secondAttribute="bottom" id="vlk-uz-v7D"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnChoice1" destination="H7r-6h-zxq" id="dqr-04-rMh"/>
+                        <outlet property="btnChoice2" destination="Ow4-TV-Ni4" id="aLj-ap-94B"/>
+                        <outlet property="lblQuestion" destination="noc-Rf-2gm" id="32h-p1-Hte"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
